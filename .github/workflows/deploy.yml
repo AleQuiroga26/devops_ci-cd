@@ -17,4 +17,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ~/lemp-sites/ale_quiroga
-            git pull origin main
+            git pull origin main 
