@@ -1,0 +1,22 @@
+name: Deploy Producción
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy a Producción via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.IP_DEL_SERVIDOR }}
+          username: ${{ secrets.USUARIO_SERVIDOR }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd ~/lemp-sites/ale_quiroga/production
+            git fetch origin
+            git reset --hard origin/main
