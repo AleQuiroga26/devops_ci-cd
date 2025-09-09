@@ -10,7 +10,7 @@ function resta(a, b) {
 function multiplicar(a, b) {
   return a * b;
 }
-// hola hola
+// hola 2
 // Esto es necesario para que las pruebas puedan usar estas funciones
 module.exports = {
   suma,
