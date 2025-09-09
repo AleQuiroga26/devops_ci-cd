@@ -17,6 +17,6 @@ jobs:
           username: ${{ secrets.USUARIO_SERVIDOR }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd ~/lemp-sites/ale_quiroga/staging
+            cd ~/lemp-sites/ale_quiroga/staging/devops_ci-cd
             git fetch origin
             git reset --hard origin/develop
